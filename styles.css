@@ -347,6 +347,14 @@ main {
   }
 }
 
+/* responsive navigation */
+@media only screen and (max-width: 750px) {
+  .flip-card {
+    width: 350px;
+    height: 300px;
+  }
+}
+
 /* CSS for resume page */
 
 .button {
