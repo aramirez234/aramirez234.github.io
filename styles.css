@@ -121,7 +121,28 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-family: Georgia;
+  font-family: "Open Sans", monospace;
+}
+
+#intro-msg {
+  animation: wiggle 1s infinite;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* CSS for dropdown menu */
@@ -255,37 +276,75 @@ main {
 }
 
 /* CSS for home page */
+.flip-card {
+  background-color: transparent;
+  width: 450px;
+  height: 350px;
+  border: 1px solid #f1f1f1;
+  perspective: 800px;
+}
 
-.about {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+}
+
+.flip-card-front p,
+.flip-card-back p {
+  padding: 10px;
+  font-size: large;
+}
+
+.flip-card-front {
+  background-color: var(--cg-white);
+  color: var(--cg-black);
+}
+
+.flip-card-back {
+  background-color: var(--cg-coral);
+  color: var(--cg-grey);
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card-row {
+  margin: 40px 0px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  gap: 15px;
 }
 
-.about-image img {
-  max-width: 300px;
-  border-radius: 3px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-}
-
-.about-text {
-  flex: 1;
-  margin-left: 20px;
-}
-
-.about-text h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.about-text p {
-  font-size: 16px;
-  line-height: 1.5;
+/* responsive navigation */
+@media only screen and (max-width: 1400px) {
+  .card-row {
+    flex-direction: column;
+  }
 }
 
 /* CSS for resume page */
@@ -308,7 +367,7 @@ main {
 }
 
 .resume h2 {
-  font-family: Georgia;
+  font-family: "Open Sans", monospace;
 }
 
 /* CSS for contact form */
@@ -316,8 +375,8 @@ main {
 label {
   display: block;
   margin-bottom: 8px;
-  font-family: Georgia;
-  font-weight: bold;
+  font-family: "Open Sans", monospace;
+  font-weight: 800;
 }
 
 input[type="text"],
