@@ -15,4 +15,4 @@ $\color{ProcessBlue}{This\ website\ is\ supposed\ to\ show\ my\ capabilities\ wh
   - Portfolio
   - Resume
 
-[Visit it Here!](https://<username>.github.io)
+[Visit it Here!](https://aramirez234.github.io)
