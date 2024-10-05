@@ -458,7 +458,6 @@ input[type="submit"] {
   background-color: var(--cg-teal);
   color: var(--cg-white);
   border: none;
-  margin: 20px auto;
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
@@ -474,6 +473,13 @@ input[type="submit"] {
   border-radius: 10px;
   background-color: var(--cg-teal2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
 #submit-container {
