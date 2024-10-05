@@ -217,6 +217,7 @@ main {
   background-color: var(--cg-coral);
   border-radius: 40px;
   gap: 40px;
+  padding-left: 40px;
 
   /* Debug border */
   /* border: 2px solid blue; */
@@ -239,15 +240,18 @@ main {
 
 .project-image {
   object-fit: cover;
+  display: block;
   height: 400px;
-  width: 100%;
-  flex-basis: 50px;
+  flex-basis: auto;
   flex-grow: 2;
   border-radius: 20px;
-  margin: 0 20px;
 
   /* Debug border */
   /* border: 2px solid black; */
+}
+
+.project-image a {
+  display: inline-block;
 }
 
 .project-details {
@@ -297,13 +301,14 @@ main {
     width: 95%;
     border-radius: 10px;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding-left: 0;
+    padding-top: 20px;
   }
 
   .project-image {
     height: 250px;
     border-radius: 10px;
-    margin: 20px 0px;
   }
 
   .project-details {
