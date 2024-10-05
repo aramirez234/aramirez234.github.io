@@ -294,17 +294,21 @@ main {
 /* responsive navigation */
 @media only screen and (max-width: 750px) {
   .project {
-    height: 300px;
     width: 95%;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .project-image {
     height: 250px;
     border-radius: 10px;
+    margin: 20px 0px;
   }
 
   .project-details {
     border-radius: 10px;
+    width: fit-content;
   }
 }
 
