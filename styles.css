@@ -4,6 +4,7 @@
   /* variables */
   --cg-black: rgb(0, 0, 0);
   --cg-teal: rgb(56, 147, 147);
+  --cg-teal2: rgb(147, 226, 226);
   --cg-coral: rgb(233, 132, 37);
   --cg-grey: rgb(243, 243, 243);
   --cg-grey2: rgb(200, 200, 200);
@@ -381,28 +382,67 @@ main {
 /* CSS for contact form */
 
 label {
-  display: block;
-  margin-bottom: 8px;
+  position: absolute;
+  padding: 0 5px;
+  z-index: 1;
+  left: 20px;
+  border-radius: 5px;
   font-family: "Open Sans", monospace;
-  font-weight: 800;
+  font-weight: 600;
+  background-color: var(--cg-coral);
+  color: var(--cg-grey);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  margin: 14px 0;
+  border: 2px solid var(--cg-grey2);
+  border-radius: 6px;
   font-size: 16px;
+  padding: 12px 0;
+  line-height: 30px;
   resize: none;
 }
 
+input[type="submit"] {
+  background-color: var(--cg-teal);
+  color: var(--cg-white);
+  border: none;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 /* Add some spacing to the form */
-form {
+#contact-form {
   width: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px;
+  border: 10px solid var(--cg-coral);
+  border-radius: 10px;
+  background-color: var(--cg-teal2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive navigation */
+@media only screen and (max-width: 750px) {
+  #contact-form {
+    width: 300px;
+  }
 }
 
 /* CSS for footer */
